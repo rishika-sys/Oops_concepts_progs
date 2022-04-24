@@ -1,0 +1,40 @@
+#include <iostream>
+
+using namespace std;
+class Animal 
+{
+    public :
+    virtual void eat()
+    {
+        cout<<"i eat generic food"<<endl;
+    }
+};
+class Cat: public Animal
+{
+    public:
+    void eat()
+    {
+        cout<<"I eat cat food"<<endl;
+    }
+};
+class Dog: public Animal
+{
+    public:
+    void eat()
+    {
+        cout<<"I eat dog food"<<endl;
+    }
+};
+
+int main()
+{
+    // cout<<"Hello World";
+    Animal* ptr;
+    Dog dogobj;
+    ptr=&dogobj;
+    ptr->eat();
+
+    return 0;
+}
+
+//An example of run time polymorphism.
